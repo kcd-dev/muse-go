@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/internal/fakemuse"
+	"github.com/kcd-dev/muse-go/internal/fakemuse"
 )
 
 func TestProtoEngineAgainstFakeGateway(t *testing.T) {

@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/hatch"
+	"github.com/kcd-dev/muse-go/hatch"
 )
 
 // Gateway imitates the Hatch gateway: a Noise XX responder followed by the

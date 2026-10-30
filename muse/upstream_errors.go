@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/hatch"
+	"github.com/kcd-dev/muse-go/hatch"
 )
 
 // classifyHTTPError distinguishes throttling from exhausted credits. A generic

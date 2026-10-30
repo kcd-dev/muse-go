@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/hatch"
-	"github.com/CoolkHz/muse-protocol-go/internal/fakemuse"
+	"github.com/kcd-dev/muse-go/hatch"
+	"github.com/kcd-dev/muse-go/internal/fakemuse"
 )
 
 func TestHTTPThrottlingClassification(t *testing.T) {

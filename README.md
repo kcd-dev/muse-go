@@ -4,13 +4,13 @@
 
 <div align="center">
 
-# muse-protocol-go
+# muse-go
 
 **将 Muse 的登录、加密通信与生成能力接入你的 Go 服务。**
 
 纯 Go · 无需浏览器 · 密码 / 验证码登录 · Noise / Hatch · 对话与媒体
 
-[![CI](https://github.com/CoolkHz/muse-protocol-go/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CoolkHz/muse-protocol-go/actions/workflows/ci.yml)
+[![CI](https://github.com/kcd-dev/muse-go/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kcd-dev/muse-go/actions/workflows/ci.yml)
 [![Go](https://img.shields.io/badge/Go-1.24%2B-00ADD8?logo=go&logoColor=white)](go.mod)
 [![License](https://img.shields.io/badge/License-MIT-6366F1)](LICENSE)
 [![Protocol](https://img.shields.io/badge/协议文档-中文-0D9488)](docs/protocol.md)
@@ -21,7 +21,7 @@
 
 ---
 
-`muse-protocol-go` 是从 muse2api 提取的独立 Go 协议库，封装了 **认证 → 会话引导 → 加密连接 → RPC → 对话与媒体输出** 的完整调用链。适合构建自托管 API 网关、为 Go 应用接入生成能力，或研究 Muse 网页端的通信协议。
+`muse-go` 是从 muse2api 提取的独立 Go 协议库，封装了 **认证 → 会话引导 → 加密连接 → RPC → 对话与媒体输出** 的完整调用链。适合构建自托管 API 网关、为 Go 应用接入生成能力，或研究 Muse 网页端的通信协议。
 
 上层通过 `login` 和 `muse` 完成业务接入；需要自定义请求时，可以直接使用 `hatch` 的 RPC 和流接口。
 
@@ -46,7 +46,7 @@
 flowchart LR
     APP["应用 / API 网关<br/>凭据 · 调度 · 存储"]
 
-    subgraph SDK["muse-protocol-go · 纯 Go SDK"]
+    subgraph SDK["muse-go · 纯 Go SDK"]
         direction TB
         LOGIN["login<br/>密码 / 验证码"]
         MUSE["muse<br/>会话 · 对话 · 媒体"]
@@ -91,8 +91,8 @@ flowchart LR
 ### 直接运行示例
 
 ```sh
-git clone https://github.com/CoolkHz/muse-protocol-go.git
-cd muse-protocol-go
+git clone https://github.com/kcd-dev/muse-go.git
+cd muse-go
 go build -o bin/muse-protocol ./cmd/muse-protocol
 
 export MUSE_EMAIL='user@example.com'
@@ -117,7 +117,7 @@ export MUSE_PROXY=direct
 ### 作为 Go 模块使用
 
 ```sh
-go get github.com/CoolkHz/muse-protocol-go
+go get github.com/kcd-dev/muse-go
 ```
 
 ## SDK 接入
@@ -260,7 +260,7 @@ go vet ./...
 go build ./...
 ```
 
-[GitHub Actions](https://github.com/CoolkHz/muse-protocol-go/actions/workflows/ci.yml) 对每次 push / pull request 执行格式、静态检查、竞态测试和编译。验证范围为本地模拟服务与公开测试向量；真实上游可用性取决于账号、网络及协议版本。
+[GitHub Actions](https://github.com/kcd-dev/muse-go/actions/workflows/ci.yml) 对每次 push / pull request 执行格式、静态检查、竞态测试和编译。验证范围为本地模拟服务与公开测试向量；真实上游可用性取决于账号、网络及协议版本。
 
 ## 接入边界
 
@@ -272,11 +272,12 @@ go build ./...
 
 ## 文档与贡献
 
+- [写代码说明](docs/coding.md)：登录、会话、对话、生成、错误分类和库内改动契约。
 - [协议说明](docs/protocol.md)：认证、HTTPS 引导、Noise 握手、protobuf 字段、历史轮询和媒体下载。
 - [开源整理范围](docs/release-scope.md)：提取范围、凭据处理与已知限制。
 - [来源与第三方许可](THIRD_PARTY_NOTICES.md)：协议参考项目、公开测试向量及依赖许可。
 
-欢迎通过 [Issues](https://github.com/CoolkHz/muse-protocol-go/issues) 反馈协议变化，或提交带有模拟服务回归用例的 PR。报告问题时请提供 Go 版本、调用方式、错误阶段和脱敏后的复现步骤，移除密码、验证码、Cookie、令牌及代理凭据。
+欢迎通过 [Issues](https://github.com/kcd-dev/muse-go/issues) 反馈协议变化，或提交带有模拟服务回归用例的 PR。报告问题时请提供 Go 版本、调用方式、错误阶段和脱敏后的复现步骤，移除密码、验证码、Cookie、令牌及代理凭据。
 
 ## 许可证与致谢
 

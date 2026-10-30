@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/login"
-	"github.com/CoolkHz/muse-protocol-go/muse"
+	"github.com/kcd-dev/muse-go/login"
+	"github.com/kcd-dev/muse-go/muse"
 )
 
 func main() {

@@ -17,7 +17,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/internal/wsock"
+	"github.com/kcd-dev/muse-go/internal/wsock"
 )
 
 // Session holds what the muse.ai HTTP bootstrap hands out for one VM.

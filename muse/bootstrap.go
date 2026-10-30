@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/hatch"
+	"github.com/kcd-dev/muse-go/hatch"
 )
 
 // siteClient makes authenticated muse.ai requests for one account and keeps

@@ -21,8 +21,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/hatch"
-	"github.com/CoolkHz/muse-protocol-go/internal/netproxy"
+	"github.com/kcd-dev/muse-go/hatch"
+	"github.com/kcd-dev/muse-go/internal/netproxy"
 )
 
 // ProtoEngine talks to muse.ai without a browser: HTTPS bootstrap, then the

@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/CoolkHz/muse-protocol-go/internal/netproxy"
+	"github.com/kcd-dev/muse-go/internal/netproxy"
 )
 
 const (

@@ -1,4 +1,4 @@
-module github.com/CoolkHz/muse-protocol-go
+module github.com/kcd-dev/muse-go
 
 go 1.24.0
 

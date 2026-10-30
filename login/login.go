@@ -23,7 +23,7 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/CoolkHz/muse-protocol-go/internal/netproxy"
+	"github.com/kcd-dev/muse-go/internal/netproxy"
 )
 
 var validOTP = regexp.MustCompile(`^[0-9]{4,16}$`)
